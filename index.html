@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yasmin Garcia Rivas | Portfolio</title>
+  <style>
+    :root { --card: rgba(255,255,255,.08); --border: rgba(255,255,255,.16); }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:#fff; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      min-height:100vh; overflow-x:hidden;
+      background: radial-gradient(1200px 800px at 20% 10%, #5b21b6 0%, transparent 55%),
+                  radial-gradient(900px 700px at 80% 30%, #0ea5e9 0%, transparent 55%),
+                  radial-gradient(900px 700px at 50% 90%, #22c55e 0%, transparent 55%),
+                  #0b1020;
+    }
+    /* animated glow */
+    .glow{
+      position:fixed; inset:-40vmax; filter: blur(60px); opacity:.35; z-index:-1;
+      background: conic-gradient(from 180deg, #22c55e, #0ea5e9, #a855f7, #f97316, #22c55e);
+      animation: spin 18s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    header{max-width:980px;margin:0 auto;padding:64px 20px 24px}
+    .title{font-size:42px;line-height:1.1;margin:0 0 10px}
+    .subtitle{margin:0;opacity:.9;font-size:18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .badge{
+      padding:8px 12px;border:1px solid var(--border);background:var(--card);
+      border-radius:999px;font-size:13px;backdrop-filter: blur(10px);
+    }
+
+    main{max-width:980px;margin:0 auto;padding:0 20px 64px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{
+      grid-column:span 12; padding:18px 18px 16px; border-radius:18px;
+      border:1px solid var(--border); background:var(--card);
+      backdrop-filter: blur(14px);
+      transform: translateY(10px); opacity:0;
+      animation: rise .7s ease forwards;
+    }
+    .card:nth-child(2){animation-delay:.08s}
+    .card:nth-child(3){animation-delay:.16s}
+    .card:nth-child(4){animation-delay:.24s}
+    @keyframes rise{to{transform:translateY(0);opacity:1}}
+
+    @media (min-width:860px){
+      .card.span6{grid-column:span 6}
+      .card.span4{grid-column:span 4}
+    }
+    h2{margin:0 0 8px;font-size:18px}
+    ul{margin:10px 0 0;padding-left:18px;opacity:.95}
+    a.btn{
+      display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;
+      border:1px solid var(--border);background:rgba(255,255,255,.06);
+      color:#fff;text-decoration:none
+    }
+    a.btn:hover{background:rgba(255,255,255,.12)}
+    footer{max-width:980px;margin:0 auto;padding:0 20px 30px;opacity:.8}
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+
+  <header>
+    <h1 class="title">Yasmin Garcia Rivas</h1>
+    <p class="subtitle">Junior Cloud & IT Analyst • Hands-on labs • Automation • Documentation</p>
+    <div class="badges">
+      <span class="badge">Azure • AD DS • DNS</span>
+      <span class="badge">AWS • VPC • ALB • Auto Scaling</span>
+      <span class="badge">Terraform • GitHub</span>
+      <span class="badge">Python Automation</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card span6">
+        <h2>About</h2>
+        <p style="margin:0;opacity:.95">
+          I build cloud infrastructure projects and document them with clear steps, screenshots, and demos.
+        </p>
+        <a class="btn" href="https://github.com/ygarcia8" target="_blank" rel="noreferrer">View my GitHub</a>
+      </section>
+
+      <section class="card span6">
+        <h2>Highlights</h2>
+        <ul>
+          <li>Azure domain setup: DC + client + web server, DNS + joins</li>
+          <li>AWS architecture: load balancer, auto scaling, database integration</li>
+          <li>Automation: scripts + structured documentation</li>
+        </ul>
+      </section>
+
+      <section class="card span4">
+        <h2>Projects</h2>
+        <ul>
+          <li>Azure Project 1 (AD + DNS)</li>
+          <li>AWS Networking / Terraform</li>
+          <li>Kubernetes labs</li>
+        </ul>
+      </section>
+
+      <section class="card span4">
+        <h2>Certifications</h2>
+        <ul>
+          <li>System Administration & IT Infrastructure Services</li>
+          <li>AWS Academy Training</li>
+        </ul>
+      </section>
+
+      <section class="card span4">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: (add yours)</li>
+          <li>LinkedIn: (add yours)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Yasmin Garcia Rivas • Built with GitHub Pages
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
