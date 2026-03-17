@@ -3722,3 +3722,22 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/*--------------------------------------------------------------
+# Hero Background Custom
+--------------------------------------------------------------*/
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(18, 31, 48, 0.85), rgba(18, 31, 48, 0.92)),
+                    url("../img/profile/cloud.webp");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-content {
+  max-width: 700px;
+}
