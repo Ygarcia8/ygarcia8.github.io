@@ -1442,9 +1442,6 @@ section,
   width: 100%;
 }
 
-.skills .skills-sidebar .technologies-section {
-  width: 100%;
-}
 
 .skills .skills-sidebar .tech-item {
   width: 100%;
@@ -1496,6 +1493,7 @@ section,
 }
 
 .skills .skills-sidebar .technologies-section {
+  width: 100%;
   margin-bottom: 40px;
 }
 
