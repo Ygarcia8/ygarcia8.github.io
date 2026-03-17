@@ -1354,7 +1354,7 @@ section,
 }
 
 .skills .skills-container {
-  padding-right: 40px;
+  padding-right: 0px;
 }
 
 .skills .skills-container .skill-category {
@@ -1428,11 +1428,10 @@ section,
   border-radius: 1px;
   transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .skills .skills-sidebar {
-  padding-left: 40px;
+  width: 100%;
+  padding-left: 32px;
 }
-
 .skills .skills-sidebar .expertise-highlight {
   background: var(--surface-soft);
   padding: 32px 24px;
@@ -1442,19 +1441,9 @@ section,
   border: 1px solid var(--border-light);
   width: 100%;
 }
-.skills .skills-sidebar {
-  width: 100%;
-  padding-left: 24px;
-}
 
 .skills .skills-sidebar .technologies-section {
   width: 100%;
-}
-
-.skills .skills-sidebar .tech-stack {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
 }
 
 .skills .skills-sidebar .tech-item {
@@ -1588,7 +1577,23 @@ section,
   line-height: 1.5;
   font-weight: 300;
 }
+.skills .skills-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
 
+.skills .skills-layout > .col-12.col-lg-8 {
+  width: 66.666667%;
+  max-width: 66.666667%;
+  flex: 0 0 66.666667%;
+}
+
+.skills .skills-layout > .col-12.col-lg-4 {
+  width: 33.333333%;
+  max-width: 33.333333%;
+  flex: 0 0 33.333333%;
+}
 @media (max-width: 992px) {
   .skills .skills-container {
     padding-right: 0;
