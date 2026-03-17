@@ -1435,13 +1435,31 @@ section,
 
 .skills .skills-sidebar .expertise-highlight {
   background: var(--surface-soft);
-  padding: 40px 32px;
+  padding: 32px 24px;
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   border: 1px solid var(--border-light);
+  width: 100%;
+}
+.skills .skills-sidebar {
+  width: 100%;
+  padding-left: 24px;
 }
 
+.skills .skills-sidebar .technologies-section {
+  width: 100%;
+}
+
+.skills .skills-sidebar .tech-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skills .skills-sidebar .tech-item {
+  width: 100%;
+}
 .skills .skills-sidebar .expertise-highlight .highlight-icon {
   margin-bottom: 24px;
 }
